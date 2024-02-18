@@ -50,6 +50,22 @@ function getTreatment(genre, age){
   return treatment;
 }
 
+function saluteByTime() {
+  const actualDate = new Date();
+  const actualHour = actualDate.getHours();
+  let salute_by_time = "Good evening ";
+
+  if (actualHour >= 6 && actualHour < 12) {
+    salute_by_time = "Good morning ";
+  }
+  else {
+    if (actualHour >= 12 && actualHour < 19) {
+      salute_by_time = "Good afternoon ";
+    }
+  }
+  return salute_by_time;
+}
+
 function saludar(nombre, edad, genero, idioma) {
   if (idioma === "ES") {
     const saludoPorHora = saludarPorHora();
@@ -58,7 +74,8 @@ function saludar(nombre, edad, genero, idioma) {
   }
   else {
     const treatment = getTreatment(genero, edad);
-    return "Hello " + treatment + nombre;;
+    const saluteTime = saluteByTime();
+    return `${saluteTime}${treatment}${nombre}`;
   }
 
 }
