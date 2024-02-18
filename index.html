@@ -1,19 +1,26 @@
 <html>
-  <body>
-    <form id="saludar-form">
-      <label for="Nombre">¿Cuál es tu nombre?</label>
-      <input type="text" id="nombre" />
-      <label for="Edad">¿Cuál es tu edad?</label>
-      <input type="text" id="edad" />
-      <label for="Genero">Selecciona una opción:</label>
-      <select id="genero" name="opciones">
-          <option value="F">Femenino</option>
-          <option value="M">Masculino</option>
-      </select>
-      <input type="submit" value="Saludar" id="saludar-button" />
-    </form>
-    <div id="resultado-div"></div>
 
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+<body>
+  <form id="saludar-form">
+    <select id="idioma" name="opciones">
+      <option value="ES">Español</option>
+      <option value="EN">English</option>
+    </select>
+    <br>
+    <label for="Nombre">¿Cuál es tu nombre?</label>
+    <input type="text" id="nombre" />
+    <label for="Edad">¿Cuál es tu edad?</label>
+    <input type="text" id="edad" />
+    <label for="Genero">Selecciona una opción:</label>
+    <select id="genero" name="opciones">
+      <option value="F">Femenino</option>
+      <option value="M">Masculino</option>
+    </select>
+    <input type="submit" value="Saludar" id="saludar-button" />
+  </form>
+  <div id="resultado-div"></div>
+
+  <script type="module" src="./src/presenter.js"></script>
+</body>
+
 </html>

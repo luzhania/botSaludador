@@ -32,10 +32,16 @@ function obtenerTratamiento(genero, edad) {
   return tratamiento;
 }
 
-function saludar(nombre, edad, genero) {
-  const saludoPorHora = saludarPorHora();
-  const tratamiento = obtenerTratamiento(genero, edad);
-  return `${saludoPorHora}${tratamiento}${nombre}`;
+function saludar(nombre, edad, genero, idioma) {
+  if (idioma === "ES") {
+    const saludoPorHora = saludarPorHora();
+    const tratamiento = obtenerTratamiento(genero, edad);
+    return `${saludoPorHora}${tratamiento}${nombre}`;
+  }
+  else {
+    return "Hello";
+  }
+
 }
 
 export default saludar;
