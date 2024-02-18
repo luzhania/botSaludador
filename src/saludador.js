@@ -32,6 +32,14 @@ function obtenerTratamiento(genero, edad) {
   return tratamiento;
 }
 
+function getTreatment(genre, age){
+  let treatment = "Mrs. ";
+  if (genre === "M") {
+    treatment = "Mr. ";
+  }
+  return treatment;
+}
+
 function saludar(nombre, edad, genero, idioma) {
   if (idioma === "ES") {
     const saludoPorHora = saludarPorHora();
@@ -39,7 +47,8 @@ function saludar(nombre, edad, genero, idioma) {
     return `${saludoPorHora}${tratamiento}${nombre}`;
   }
   else {
-    return "Hello " + nombre;
+    const treatment = getTreatment(genero);
+    return "Hello " + treatment + nombre;;
   }
 
 }
