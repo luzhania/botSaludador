@@ -39,7 +39,7 @@ function saludar(nombre, edad, genero, idioma) {
     return `${saludoPorHora}${tratamiento}${nombre}`;
   }
   else {
-    return "Hello";
+    return "Hello " + nombre;
   }
 
 }
