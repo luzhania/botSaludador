@@ -13,6 +13,6 @@ form.addEventListener("submit", (event) => {
   const edad = Number.parseInt(edad_input.value);
   const genero = genero_input.value;
 
-  div.innerHTML = "<p> Hola " + saludar(nombre, edad, genero) + "</p>";
+  div.innerHTML = "<p>" + saludar(nombre, edad, genero) + "</p>";
 });
 
